@@ -3,7 +3,7 @@ const musicians = [
     {
         id: 1,
         name: 'Bowling Shoes',
-        genre: 'Musician',
+        genre: 'Band',
         image: 'https://via.placeholder.com/250x250?text=Bowling+Shoes',
         instagram: '',
         spotify: ''
@@ -11,31 +11,15 @@ const musicians = [
     {
         id: 2,
         name: 'Bronson Arm',
-        genre: 'Musician',
+        genre: 'Artist',
         image: 'https://via.placeholder.com/250x250?text=Bronson+Arm',
-        instagram: '',
-        spotify: ''
-    },
-    {
-        id: 3,
-        name: 'Some Days Are Darker',
-        genre: 'Musician',
-        image: 'https://via.placeholder.com/250x250?text=Some+Days+Are+Darker',
-        instagram: '',
-        spotify: ''
-    },
-    {
-        id: 4,
-        name: 'The Drought',
-        genre: 'Musician',
-        image: 'https://via.placeholder.com/250x250?text=The+Drought',
         instagram: '',
         spotify: ''
     },
     {
         id: 5,
         name: 'Ethyl Cat',
-        genre: 'Musician',
+        genre: 'Band',
         image: 'https://via.placeholder.com/250x250?text=Ethyl+Cat',
         instagram: '',
         spotify: ''
@@ -49,34 +33,50 @@ const musicians = [
         spotify: ''
     },
     {
-        id: 7,
-        name: 'Topline Addicts',
-        genre: 'Musician',
-        image: 'https://via.placeholder.com/250x250?text=Topline+Addicts',
-        instagram: '',
-        spotify: ''
-    },
-    {
         id: 8,
         name: 'Lofi Legs',
-        genre: 'Musician',
+        genre: 'Band',
         image: 'https://via.placeholder.com/250x250?text=Lofi+Legs',
-        instagram: '',
-        spotify: ''
-    },
-    {
-        id: 9,
-        name: 'Stairwell Confessions',
-        genre: 'Musician',
-        image: 'https://via.placeholder.com/250x250?text=Stairwell+Confessions',
         instagram: '',
         spotify: ''
     },
     {
         id: 10,
         name: 'Nathan Mac',
-        genre: 'Musician',
+        genre: 'Artist',
         image: 'https://via.placeholder.com/250x250?text=Nathan+Mac',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 3,
+        name: 'Some Days Are Darker',
+        genre: 'Band',
+        image: 'https://via.placeholder.com/250x250?text=Some+Days+Are+Darker',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 9,
+        name: 'Stairwell Confessions',
+        genre: 'Band',
+        image: 'https://via.placeholder.com/250x250?text=Stairwell+Confessions',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 4,
+        name: 'The Drought',
+        genre: 'Band',
+        image: 'https://via.placeholder.com/250x250?text=The+Drought',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 7,
+        name: 'Topline Addicts',
+        genre: 'Band',
+        image: 'https://via.placeholder.com/250x250?text=Topline+Addicts',
         instagram: '',
         spotify: ''
     }
