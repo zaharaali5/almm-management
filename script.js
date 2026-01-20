@@ -39,6 +39,46 @@ const musicians = [
         image: 'https://via.placeholder.com/250x250?text=Ethyl+Cat',
         instagram: '',
         spotify: ''
+    },
+    {
+        id: 6,
+        name: 'Johnnyrook',
+        genre: 'Musician',
+        image: 'https://via.placeholder.com/250x250?text=Johnnyrook',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 7,
+        name: 'Topline Addicts',
+        genre: 'Musician',
+        image: 'https://via.placeholder.com/250x250?text=Topline+Addicts',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 8,
+        name: 'Lofi Legs',
+        genre: 'Musician',
+        image: 'https://via.placeholder.com/250x250?text=Lofi+Legs',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 9,
+        name: 'Stairwell Confessions',
+        genre: 'Musician',
+        image: 'https://via.placeholder.com/250x250?text=Stairwell+Confessions',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 10,
+        name: 'Nathan Mac',
+        genre: 'Musician',
+        image: 'https://via.placeholder.com/250x250?text=Nathan+Mac',
+        instagram: '',
+        spotify: ''
     }
 ];
 
