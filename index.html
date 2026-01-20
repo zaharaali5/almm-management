@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALMM Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">ALMM Management</h1>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Artists</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Our Roster</h2>
+                <p>Discover our talented roster of musicians, composers, and creators</p>
+            </div>
+        </section>
+
+        <section class="tabs-section">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="musicians">Musicians</button>
+                    <button class="tab-button" data-tab="production">Production & Engineering</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="roster">
+            <div class="container">
+                <div id="musicians" class="tab-content active">
+                    <div class="artists-grid" id="musiciansGrid">
+                        <!-- Musicians will be dynamically loaded here -->
+                    </div>
+                </div>
+                <div id="production" class="tab-content">
+                    <div class="artists-grid" id="productionGrid">
+                        <!-- Production team will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ALMM Management. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
