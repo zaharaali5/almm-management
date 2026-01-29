@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALMM Management</title>
+    <link rel="icon" type="image/png" href="Bold Graffiti ALMM Logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="container">
-                <h1 class="logo">ALMM Management</h1>
+                <div class="brand">
+                    <img src="ALMM Logo.png" alt="ALMM Management logo" class="brand-logo">
+                </div>
                 <ul class="nav-links">
-                    <li><a href="#" class="active">Artists</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#roster">Roster</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="home-hero" id="home">
+            <div class="container home-hero-content">
+                <img src="Bold Graffiti ALMM Logo.png" alt="ALMM Management" class="home-hero-logo">
+            </div>
+        </section>
+
+        <section class="hero" id="roster">
             <div class="container">
-                <h2>Our Roster</h2>
-                <p>Discover our talented roster of musicians, composers, and creators</p>
+                <h2>Our Artists</h2>
             </div>
         </section>
 
@@ -51,6 +59,7 @@
             </div>
         </section>
     </main>
+
 
     <footer>
         <div class="container">

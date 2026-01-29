@@ -4,7 +4,8 @@ const musicians = [
         id: 1,
         name: 'Bowling Shoes',
         genre: 'Band',
-        image: 'https://via.placeholder.com/250x250?text=Bowling+Shoes',
+        image: 'unnamed.jpg',
+        website: 'https://bowlingshoes.bandcamp.com/album/bowling-shoes',
         instagram: '',
         spotify: ''
     },
@@ -12,15 +13,17 @@ const musicians = [
         id: 2,
         name: 'Bronson Arm',
         genre: 'Artist',
-        image: 'https://via.placeholder.com/250x250?text=Bronson+Arm',
+        image: 'unnamed-3.jpg',
+        website: 'https://bronsonarm.bandcamp.com/album/s-t',
         instagram: '',
         spotify: ''
     },
     {
-        id: 5,
-        name: 'Ethyl Cat',
-        genre: 'Band',
-        image: 'https://via.placeholder.com/250x250?text=Ethyl+Cat',
+        id: 11,
+        name: 'Immateria',
+        genre: 'Artist',
+        image: 'IMMATERIA Photo for Website.jpg',
+        website: 'https://immateria.bandzoogle.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnGDLdBaNE876SrNd3dXzOs9y4YVkjJgM4B4JeyNt8lgMjxb8F-96DSfdLJTY_aem_ZpkfrUEVYsuVlLkSpGI8bA',
         instagram: '',
         spotify: ''
     },
@@ -28,23 +31,24 @@ const musicians = [
         id: 6,
         name: 'Johnnyrook',
         genre: 'Musician',
-        image: 'https://via.placeholder.com/250x250?text=Johnnyrook',
-        instagram: '',
+        image: 'Johnnyrook Photo for Website.jpg',
+        instagram: 'https://www.instagram.com/johnnyrookmusic/',
         spotify: ''
     },
     {
         id: 8,
         name: 'Lofi Legs',
         genre: 'Band',
-        image: 'https://via.placeholder.com/250x250?text=Lofi+Legs',
-        instagram: '',
+        image: 'Lofi Legs Website photo.jpg',
+        instagram: 'https://www.instagram.com/lofilegacy/',
         spotify: ''
     },
     {
         id: 10,
         name: 'Nathan Mac',
         genre: 'Artist',
-        image: 'https://via.placeholder.com/250x250?text=Nathan+Mac',
+        image: 'Nathan Mac Photo for Website.jpg',
+        website: 'https://www.nathanmacmusic.com/',
         instagram: '',
         spotify: ''
     },
@@ -52,7 +56,8 @@ const musicians = [
         id: 3,
         name: 'Some Days Are Darker',
         genre: 'Band',
-        image: 'https://via.placeholder.com/250x250?text=Some+Days+Are+Darker',
+        image: 'unnamed-2.jpg',
+        website: 'https://somedaysaredarker.com/',
         instagram: '',
         spotify: ''
     },
@@ -60,7 +65,8 @@ const musicians = [
         id: 9,
         name: 'Stairwell Confessions',
         genre: 'Band',
-        image: 'https://via.placeholder.com/250x250?text=Stairwell+Confessions',
+        image: 'Stairwell Confessions Photo for Website.jpg',
+        website: 'https://stairwellconfessions.com/',
         instagram: '',
         spotify: ''
     },
@@ -68,7 +74,8 @@ const musicians = [
         id: 4,
         name: 'The Drought',
         genre: 'Band',
-        image: 'https://via.placeholder.com/250x250?text=The+Drought',
+        image: 'Bandofficial.1.jpg',
+        website: 'https://thedrought.band',
         instagram: '',
         spotify: ''
     },
@@ -76,8 +83,8 @@ const musicians = [
         id: 7,
         name: 'Topline Addicts',
         genre: 'Band',
-        image: 'https://via.placeholder.com/250x250?text=Topline+Addicts',
-        instagram: '',
+        image: 'Topline Addicts Photo for Website.jpg',
+        instagram: 'https://www.instagram.com/toplineaddicts/',
         spotify: ''
     }
 ];
@@ -87,7 +94,8 @@ const productionTeam = [
         id: 4,
         name: 'Todd Rutherford',
         genre: 'Composer, Mixing & Production',
-        image: 'https://via.placeholder.com/250x250?text=Todd+Rutherford',
+        image: 'unnamed-5.jpg',
+        website: 'https://toddrutherfordmusic.com/splashpage',
         instagram: '',
         spotify: ''
     },
@@ -95,7 +103,8 @@ const productionTeam = [
         id: 5,
         name: 'Darren Lawson',
         genre: 'Mixing & Production',
-        image: 'https://via.placeholder.com/250x250?text=Darren+Lawson',
+        image: 'unnamed-4.jpg',
+        website: 'https://www.darrenlawson.co.uk/',
         instagram: '',
         spotify: ''
     }
@@ -105,6 +114,7 @@ const productionTeam = [
 document.addEventListener('DOMContentLoaded', function() {
     loadArtists();
     setupTabs();
+    setupNavHighlight();
 });
 
 function loadArtists() {
@@ -113,13 +123,13 @@ function loadArtists() {
     
     // Load musicians
     musicians.forEach(artist => {
-        const card = createArtistCard(artist);
+        const card = createArtistCard(artist, 'musicians');
         musiciansGrid.appendChild(card);
     });
 
     // Load production team
     productionTeam.forEach(artist => {
-        const card = createArtistCard(artist);
+        const card = createArtistCard(artist, 'production');
         productionGrid.appendChild(card);
     });
 }
@@ -143,23 +153,71 @@ function setupTabs() {
     });
 }
 
-function createArtistCard(artist) {
+function createArtistCard(artist, category) {
     const card = document.createElement('div');
     card.className = 'artist-card';
+    const showRole = category === 'production' && artist.genre;
+    const imageClass = artist.name === 'Immateria' ? 'artist-image fit-contain' : 'artist-image';
     
     card.innerHTML = `
         <div class="artist-image-container">
-            <img src="${artist.image}" alt="${artist.name}" class="artist-image">
+            <img src="${artist.image}" alt="${artist.name}" class="${imageClass}">
         </div>
         <div class="artist-info">
             <h3 class="artist-name">${artist.name}</h3>
-            <p class="artist-genre">${artist.genre}</p>
+            ${showRole ? `<p class="artist-genre">${artist.genre}</p>` : ''}
             <div class="artist-links">
-                ${artist.instagram ? `<a href="${artist.instagram}" target="_blank">Instagram</a>` : ''}
+                ${artist.website ? `<a href="${artist.website}" target="_blank">About</a>` : ''}
+                ${artist.instagram ? `<a href="${artist.instagram}" target="_blank">About</a>` : ''}
                 ${artist.spotify ? `<a href="${artist.spotify}" target="_blank">Spotify</a>` : ''}
             </div>
         </div>
     `;
     
     return card;
+}
+
+function setupNavHighlight() {
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = ['home', 'roster']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+    if (!navLinks.length || !sections.length) {
+        return;
+    }
+
+    const setActive = id => {
+        navLinks.forEach(link => {
+            const target = link.getAttribute('href');
+            link.classList.toggle('active', target === `#${id}`);
+        });
+    };
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const targetId = link.getAttribute('href').replace('#', '');
+            setActive(targetId);
+        });
+    });
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setActive(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: '-40% 0px -40% 0px',
+                threshold: 0,
+            }
+        );
+
+        sections.forEach(section => observer.observe(section));
+    } else {
+        setActive(sections[0].id);
+    }
 }
