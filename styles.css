@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2026 Zahara Ali
+ * All rights reserved.
+ */
 * {
     margin: 0;
     padding: 0;
@@ -289,31 +293,11 @@ footer {
 }
 
 footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: block;
 }
 
 footer p {
-    flex: 1;
-    min-width: 300px;
-}
-
-.social-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-.social-links a:hover {
-    opacity: 0.7;
+    margin: 0;
 }
 
 /* Responsive */
@@ -339,10 +323,6 @@ footer p {
     .artists-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1.5rem;
-    }
-
-    footer .container {
-        flex-direction: column;
     }
 
     footer p {

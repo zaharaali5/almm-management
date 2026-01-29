@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Zahara Ali
+ * All rights reserved.
+ */
+
 // Artist data organized by category
 const musicians = [
     {
