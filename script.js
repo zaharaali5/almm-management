@@ -22,7 +22,7 @@ const musicians = [
         id: 11,
         name: 'Immateria',
         genre: 'Artist',
-        image: 'IMMATERIA%20Photo%20for%20Website.jpg',
+        image: 'IMMATERIA Photo for Website.jpg',
         website: 'https://immateria.bandzoogle.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnGDLdBaNE876SrNd3dXzOs9y4YVkjJgM4B4JeyNt8lgMjxb8F-96DSfdLJTY_aem_ZpkfrUEVYsuVlLkSpGI8bA',
         instagram: '',
         spotify: ''
@@ -31,7 +31,7 @@ const musicians = [
         id: 6,
         name: 'Johnnyrook',
         genre: 'Musician',
-        image: 'Johnnyrook%20Photo%20for%20Website.jpg',
+        image: 'Johnnyrook Photo for Website.jpg',
         instagram: 'https://www.instagram.com/johnnyrookmusic/',
         spotify: ''
     },
@@ -39,7 +39,7 @@ const musicians = [
         id: 8,
         name: 'Lofi Legs',
         genre: 'Band',
-        image: 'Lofi%20Legs%20Website%20photo.jpg',
+        image: 'Lofi Legs Website photo.jpg',
         instagram: 'https://www.instagram.com/lofilegacy/',
         spotify: ''
     },
@@ -47,7 +47,7 @@ const musicians = [
         id: 10,
         name: 'Nathan Mac',
         genre: 'Artist',
-        image: 'Nathan%20Mac%20Photo%20for%20Website.jpg',
+        image: 'Nathan Mac Photo for Website.jpg',
         website: 'https://www.nathanmacmusic.com/',
         instagram: '',
         spotify: ''
@@ -65,7 +65,7 @@ const musicians = [
         id: 9,
         name: 'Stairwell Confessions',
         genre: 'Band',
-        image: 'Stairwell%20Confessions%20Photo%20for%20Website.jpg',
+        image: 'Stairwell Confessions Photo for Website.jpg',
         website: 'https://stairwellconfessions.com/',
         instagram: '',
         spotify: ''
@@ -83,7 +83,7 @@ const musicians = [
         id: 7,
         name: 'Topline Addicts',
         genre: 'Band',
-        image: 'Topline%20Addicts%20Photo%20for%20Website.jpg',
+        image: 'Topline Addicts Photo for Website.jpg',
         instagram: 'https://www.instagram.com/toplineaddicts/',
         spotify: ''
     }
