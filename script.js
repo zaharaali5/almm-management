@@ -79,10 +79,15 @@ const musicians = [
         id: 4,
         name: 'The Drought',
         genre: 'Band',
-        image: 'Bandofficial.1.jpg',
+        image: 'sunlady.png',
         website: 'https://thedrought.band',
         instagram: '',
-        spotify: ''
+        spotify: '',
+        imageStyle: {
+            width: '50%',
+            height: 'auto'
+        },
+        imageClass: 'sunlady'
     },
     {
         id: 7,
@@ -162,7 +167,7 @@ function createArtistCard(artist, category) {
     const card = document.createElement('div');
     card.className = 'artist-card';
     const showRole = category === 'production' && artist.genre;
-    const imageClass = artist.name === 'Immateria' ? 'artist-image fit-contain' : 'artist-image';
+    const imageClass = artist.imageClass ? `artist-image ${artist.imageClass}` : 'artist-image';
     
     card.innerHTML = `
         <div class="artist-image-container">
