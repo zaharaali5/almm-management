@@ -24,15 +24,6 @@ const musicians = [
         spotify: ''
     },
     {
-        id: 11,
-        name: 'Immateria',
-        genre: 'Artist',
-        image: 'IMMATERIA Photo for Website.jpg',
-        website: 'https://immateria.bandzoogle.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnGDLdBaNE876SrNd3dXzOs9y4YVkjJgM4B4JeyNt8lgMjxb8F-96DSfdLJTY_aem_ZpkfrUEVYsuVlLkSpGI8bA',
-        instagram: '',
-        spotify: ''
-    },
-    {
         id: 6,
         name: 'Johnnyrook',
         genre: 'Musician',
@@ -187,6 +178,7 @@ function createArtistCard(artist, category) {
     return card;
 }
 
+// Updated setupNavHighlight to ensure menu items highlight correctly based on scroll position
 function setupNavHighlight() {
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
     const sections = ['home', 'roster']
@@ -204,13 +196,6 @@ function setupNavHighlight() {
         });
     };
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const targetId = link.getAttribute('href').replace('#', '');
-            setActive(targetId);
-        });
-    });
-
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver(
             entries => {
@@ -222,12 +207,26 @@ function setupNavHighlight() {
             },
             {
                 rootMargin: '-40% 0px -40% 0px',
-                threshold: 0,
+                threshold: 0.5, // Adjusted threshold for better highlighting
             }
         );
 
         sections.forEach(section => observer.observe(section));
     } else {
-        setActive(sections[0].id);
+        // Fallback for browsers without IntersectionObserver
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            const currentSection = sections.find(section => {
+                const rect = section.getBoundingClientRect();
+                return (
+                    rect.top + window.scrollY <= scrollPosition &&
+                    rect.bottom + window.scrollY > scrollPosition
+                );
+            });
+
+            if (currentSection) {
+                setActive(currentSection.id);
+            }
+        });
     }
 }
