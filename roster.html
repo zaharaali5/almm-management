@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2026 Zahara Ali
+    All rights reserved.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALMM Management | Roster</title>
+    <link rel="icon" type="image/png" href="Bold Graffiti ALMM Logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="roster-page">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="brand">
+                    <img src="ALMM Logo.png" alt="ALMM Management logo" class="brand-logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="roster.html" class="active">Roster</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="roster">
+            <div class="container">
+                <h2>Our Artists</h2>
+            </div>
+        </section>
+
+        <section class="tabs-section">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="musicians">Artists</button>
+                    <button class="tab-button" data-tab="production">Production & Engineering</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="roster">
+            <div class="container">
+                <div id="musicians" class="tab-content active">
+                    <div class="artists-grid" id="musiciansGrid">
+                        <!-- Musicians will be dynamically loaded here -->
+                    </div>
+                </div>
+                <div id="production" class="tab-content">
+                    <div class="artists-grid" id="productionGrid">
+                        <!-- Production team will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ALMM Management. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Site creation & design by Zahara Ali -->
+
+    <script src="script.js"></script>
+</body>
+</html>

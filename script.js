@@ -32,6 +32,14 @@ const musicians = [
         spotify: ''
     },
     {
+        id: 11,
+        name: 'Ethyl Cat',
+        genre: 'Artist',
+        image: 'IMG_8623.JPG',
+        instagram: 'https://www.instagram.com/ethylcat/',
+        spotify: ''
+    },
+    {
         id: 8,
         name: 'Lofi Legs',
         genre: 'Band',
@@ -74,11 +82,7 @@ const musicians = [
         website: 'https://thedrought.band',
         instagram: '',
         spotify: '',
-        imageStyle: {
-            width: '50%',
-            height: 'auto'
-        },
-        imageClass: 'sunlady'
+        imageClass: 'fit-contain'
     },
     {
         id: 7,
@@ -115,12 +119,15 @@ const productionTeam = [
 document.addEventListener('DOMContentLoaded', function() {
     loadArtists();
     setupTabs();
-    setupNavHighlight();
 });
 
 function loadArtists() {
     const musiciansGrid = document.getElementById('musiciansGrid');
     const productionGrid = document.getElementById('productionGrid');
+
+    if (!musiciansGrid || !productionGrid) {
+        return;
+    }
     
     // Load musicians
     musicians.forEach(artist => {
@@ -138,6 +145,10 @@ function loadArtists() {
 function setupTabs() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
+
+    if (!tabButtons.length || !tabContents.length) {
+        return;
+    }
 
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -176,57 +187,4 @@ function createArtistCard(artist, category) {
     `;
     
     return card;
-}
-
-// Updated setupNavHighlight to ensure menu items highlight correctly based on scroll position
-function setupNavHighlight() {
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-    const sections = ['home', 'roster']
-        .map(id => document.getElementById(id))
-        .filter(Boolean);
-
-    if (!navLinks.length || !sections.length) {
-        return;
-    }
-
-    const setActive = id => {
-        navLinks.forEach(link => {
-            const target = link.getAttribute('href');
-            link.classList.toggle('active', target === `#${id}`);
-        });
-    };
-
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setActive(entry.target.id);
-                    }
-                });
-            },
-            {
-                rootMargin: '-40% 0px -40% 0px',
-                threshold: 0.5, // Adjusted threshold for better highlighting
-            }
-        );
-
-        sections.forEach(section => observer.observe(section));
-    } else {
-        // Fallback for browsers without IntersectionObserver
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY + window.innerHeight / 2;
-            const currentSection = sections.find(section => {
-                const rect = section.getBoundingClientRect();
-                return (
-                    rect.top + window.scrollY <= scrollPosition &&
-                    rect.bottom + window.scrollY > scrollPosition
-                );
-            });
-
-            if (currentSection) {
-                setActive(currentSection.id);
-            }
-        });
-    }
 }
