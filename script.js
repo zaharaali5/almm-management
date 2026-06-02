@@ -40,11 +40,12 @@ const musicians = [
         spotify: ''
     },
     {
-        id: 8,
-        name: 'Lofi Legs',
-        genre: 'Band',
-        image: 'Lofi Legs Website photo.jpg',
-        instagram: 'https://www.instagram.com/lofilegacy/',
+        id: 12,
+        name: 'SLEEPTALKER',
+        genre: 'Artist',
+        image: 'image.png',
+        website: 'https://sleeptalker.us/home',
+        instagram: '',
         spotify: ''
     },
     {
@@ -95,15 +96,6 @@ const musicians = [
 ];
 
 const productionTeam = [
-    {
-        id: 4,
-        name: 'Todd Rutherford',
-        genre: 'Composer, Mixing & Production',
-        image: 'unnamed-5.jpg',
-        website: 'https://toddrutherfordmusic.com/splashpage',
-        instagram: '',
-        spotify: ''
-    },
     {
         id: 5,
         name: 'Darren Lawson',
