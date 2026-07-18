@@ -24,6 +24,15 @@ const musicians = [
         spotify: ''
     },
     {
+        id: 13,
+        name: 'Crash Through the Floor',
+        genre: 'Band',
+        image: '1000012737.png',
+        website: 'https://crashthroughtheflo.wixsite.com/crash-through-the-fl',
+        instagram: '',
+        spotify: ''
+    },
+    {
         id: 6,
         name: 'Johnnyrook',
         genre: 'Musician',
