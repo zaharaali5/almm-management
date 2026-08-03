@@ -33,14 +33,6 @@ const musicians = [
         spotify: ''
     },
     {
-        id: 6,
-        name: 'Johnnyrook',
-        genre: 'Musician',
-        image: 'Johnnyrook Photo for Website.jpg',
-        instagram: 'https://www.instagram.com/johnnyrookmusic/',
-        spotify: ''
-    },
-    {
         id: 11,
         name: 'Ethyl Cat',
         genre: 'Artist',
@@ -49,12 +41,11 @@ const musicians = [
         spotify: ''
     },
     {
-        id: 12,
-        name: 'SLEEPTALKER',
-        genre: 'Artist',
-        image: 'image.png',
-        website: 'https://sleeptalker.us/home',
-        instagram: '',
+        id: 6,
+        name: 'Johnnyrook',
+        genre: 'Musician',
+        image: 'Johnnyrook Photo for Website.jpg',
+        instagram: 'https://www.instagram.com/johnnyrookmusic/',
         spotify: ''
     },
     {
@@ -63,6 +54,15 @@ const musicians = [
         genre: 'Artist',
         image: 'Nathan Mac Photo for Website.jpg',
         website: 'https://www.nathanmacmusic.com/',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 12,
+        name: 'SLEEPTALKER',
+        genre: 'Artist',
+        image: 'image.png',
+        website: 'https://sleeptalker.us/home',
         instagram: '',
         spotify: ''
     },
@@ -81,6 +81,15 @@ const musicians = [
         genre: 'Band',
         image: 'Stairwell Confessions Photo for Website.jpg',
         website: 'https://stairwellconfessions.com/',
+        instagram: '',
+        spotify: ''
+    },
+    {
+        id: 14,
+        name: 'The Crooked Stuff',
+        genre: 'Band',
+        image: 'artist.jpg.png',
+        website: '',
         instagram: '',
         spotify: ''
     },
