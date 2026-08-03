@@ -89,7 +89,7 @@ const musicians = [
         name: 'The Crooked Stuff',
         genre: 'Band',
         image: 'artist.jpg.png',
-        website: '',
+        website: 'https://www.thecrookedstuff.com',
         instagram: '',
         spotify: ''
     },
