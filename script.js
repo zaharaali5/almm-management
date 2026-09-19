@@ -27,8 +27,8 @@ const musicians = [
         id: 13,
         name: 'Crash Through the Floor',
         genre: 'Band',
-        image: '1000012737.png',
-        website: 'https://crashthroughtheflo.wixsite.com/crash-through-the-fl',
+        image: 'Crash Through The Floor - Perfered Promo.jpeg',
+        website: 'https://crashthroughthefloor.komi.io/',
         instagram: '',
         spotify: ''
     },
@@ -61,7 +61,7 @@ const musicians = [
         id: 12,
         name: 'SLEEPTALKER',
         genre: 'Artist',
-        image: 'image.png',
+        image: 'Preferred Promo.png',
         website: 'https://sleeptalker.us/home',
         instagram: '',
         spotify: ''
@@ -97,11 +97,10 @@ const musicians = [
         id: 4,
         name: 'The Drought',
         genre: 'Band',
-        image: 'sunlady.png',
+        image: '057A0487.JPG',
         website: 'https://thedrought.band',
         instagram: '',
-        spotify: '',
-        imageClass: 'fit-contain'
+        spotify: ''
     },
     {
         id: 7,

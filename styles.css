@@ -218,7 +218,7 @@ header {
 
 .artist-card {
     background: white;
-    border: 1px solid var(--light-gray);
+    border: none;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -228,27 +228,33 @@ header {
 .artist-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    border-color: var(--accent-color);
+    border-color: transparent;
 }
 
 .artist-image-container {
     width: 100%;
-    height: 250px;
-    background-color: var(--secondary-color);
+    height: 320px;
+    background-color: transparent;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .artist-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease;
 }
 
 .artist-image.fit-contain {
     object-fit: contain;
-    background-color: var(--secondary-color);
+    background-color: transparent;
 }
 
 .artist-card:hover .artist-image {
@@ -353,7 +359,8 @@ footer p {
     }
 
     .artist-image-container {
-        height: 150px;
+        height: 180px;
+        padding: 0;
     }
 
     .artist-name {
