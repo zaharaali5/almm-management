@@ -7,7 +7,7 @@
 const musicians = [
     {
         id: 15,
-        name: 'Beach Kitty',
+        name: 'BeachKitty',
         genre: 'Artist',
         image: 'image copy.png',
         website: 'https://linktr.ee/beachkittyyy',
