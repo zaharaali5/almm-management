@@ -6,6 +6,15 @@
 // Artist data organized by category
 const musicians = [
     {
+        id: 15,
+        name: 'Beach Kitty',
+        genre: 'Artist',
+        image: 'image copy.png',
+        website: 'https://linktr.ee/beachkittyyy',
+        instagram: '',
+        spotify: ''
+    },
+    {
         id: 1,
         name: 'Bowling Shoes',
         genre: 'Band',
